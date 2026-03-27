@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* Tailwind v4 CSS-first configuration */
+@theme {
+  --color-edu-olive: #393622;
+  --color-edu-text: #4a4737;
+  --color-edu-green: #8bcc3b;
+  --color-edu-green-dark: #4b6f20;
+  --color-edu-green-light: #b4e670;
+  --color-edu-green-pale: #e8f5d3;
+  --color-edu-bg: #ffffff;
+  --color-edu-grid: #f0f0f0;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --grid-color: var(--color-edu-grid);
+  --bg-color: var(--color-edu-bg);
+}
+
+@layer base {
+  body {
+    /* Set default text color */
+    color: var(--color-edu-olive);
+    
+    /* The drafting-board grid background */
+    background-color: var(--bg-color);
+    background-image: 
+      linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+    background-size: 60px 60px;
+    background-position: top center;
+    background-attachment: fixed;
+  }
+}
